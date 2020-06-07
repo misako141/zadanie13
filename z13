@@ -1,0 +1,50 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+       
+       int[][] array = new int[10][10];
+		for(int i=0; i<array.length; i++)
+		{
+		    for(int j=0;j<array[i].length;j++)
+		    {
+		        array[i][j] = (int)(Math.random()*50-25 );
+		    }
+		}
+		for(int i=0; i<array.length; i++)
+		{
+		    for(int j=0;j<array[i].length;j++)
+		    {
+		        System.out.print(array[i][j] + "\t ");
+		    }
+		}
+		
+		System.out.print("\n \n");
+		
+		for (int i=0; i<10; i++)
+       	 	{
+              for (int j=0;j < array.length;j++)
+              {
+                for (int g=0;g < array[j].length-1;g++)
+                {
+                  int zamen=0;
+                  if (array[g][j]>array[g+1][j])
+                  {
+                    zamen=array[g][j];
+                    array[g][j]=array[g+1][j];
+                    array[g+1][j]=zamen;
+                  }
+                }
+              }
+            }
+        for(int i=0; i<array.length; i++)
+		{
+		    for(int j=0;j<array[i].length;j++)
+		    {
+		        System.out.print(array[i][j] + "\t ");
+		    }
+		}
+
+    }
+	    
+}
